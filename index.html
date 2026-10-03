@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ChemData Manager</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>🧪 ChemData Manager</h1>
+    <p>Gestor computacional de compuestos orgánicos</p>
+  </div>
+
+  <span class="badge">Química + Estructuras de Datos</span>
+</header>
+
+<main>
+
+  <section class="panel">
+
+    <h2>Seleccionar compuesto</h2>
+
+    <p>
+      Selecciona una molécula para consultar su estructura,
+      clasificación química y análisis computacional.
+    </p>
+
+    <select id="selectorCompuesto">
+      <option value="metano">Metano</option>
+      <option value="etanol">Etanol</option>
+      <option value="acidoAcetico">Ácido acético</option>
+    </select>
+
+    <button id="btnAnalizar">
+      Analizar compuesto
+    </button>
+
+  </section>
+
+
+  <section class="resultados">
+
+    <div class="tarjeta">
+
+      <h3>Información química</h3>
+
+      <p>
+        <strong>Compuesto:</strong>
+        <span id="nombre">Metano</span>
+      </p>
+
+      <p>
+        <strong>Fórmula:</strong>
+        <span id="formula">CH₄</span>
+      </p>
+
+      <p>
+        <strong>Clasificación:</strong>
+        <span id="clasificacion">Hidrocarburo</span>
+      </p>
+
+      <p>
+        <strong>Grupo funcional:</strong>
+        <span id="grupo">No aplica</span>
+      </p>
+
+    </div>
+
+
+    <div class="tarjeta">
+
+      <h3>Lista de átomos</h3>
+
+      <p>
+        Esta estructura almacena individualmente
+        los átomos presentes en el compuesto.
+      </p>
+
+      <div id="listaAtomos" class="atomos"></div>
+
+    </div>
+
+  </section>
+
+
+  <section class="panel">
+
+    <h2>Representación mediante grafo</h2>
+
+    <p>
+      Cada átomo funciona como un nodo y los enlaces químicos
+      se representan mediante conexiones entre los nodos.
+    </p>
+
+    <div id="molecula" class="molecula"></div>
+
+  </section>
+
+
+  <section class="resultados">
+
+    <div class="tarjeta">
+
+      <h3>🔎 Recorrido BFS</h3>
+
+      <p>
+        El algoritmo utiliza una <strong>cola</strong>
+        para recorrer los nodos del grafo molecular.
+      </p>
+
+      <button id="btnBFS">
+        Ejecutar recorrido BFS
+      </button>
+
+      <div id="resultadoBFS" class="resultado">
+        Esperando análisis...
+      </div>
+
+    </div>
+
+
+    <div class="tarjeta">
+
+      <h3>🧠 Clasificación automática</h3>
+
+      <p>
+        El sistema analiza las características registradas
+        y aplica reglas para determinar la clasificación química.
+      </p>
+
+      <button id="btnClasificar">
+        Clasificar compuesto
+      </button>
+
+      <div id="resultadoClasificacion" class="resultado">
+        Esperando análisis...
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="panel">
+
+    <h2>Integración de conceptos</h2>
+
+    <div class="conceptos">
+
+      <div>
+        <strong>Lista</strong>
+        <span>Almacena los átomos</span>
+      </div>
+
+      <div>
+        <strong>Grafo</strong>
+        <span>Representa enlaces</span>
+      </div>
+
+      <div>
+        <strong>Cola</strong>
+        <span>Permite ejecutar BFS</span>
+      </div>
+
+      <div>
+        <strong>Reglas</strong>
+        <span>Clasifican el compuesto</span>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>ChemData Manager</strong>
+
+  <p>
+    Proyecto modular e integrador —
+    Química analítica con estructuras de datos
+  </p>
+
+  <p>
+    Universidad Virtual CNCI
+  </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
